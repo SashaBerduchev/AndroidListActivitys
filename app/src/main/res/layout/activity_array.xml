@@ -40,23 +40,23 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textArray1"
-        android:layout_width="190dp"
-        android:layout_height="55dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editArray1" />
-
-    <TextView
         android:id="@+id/textViewArray2"
         android:layout_width="193dp"
         android:layout_height="48dp"
-        android:layout_marginTop="8dp"
         android:layout_marginBottom="322dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/ArrayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/ArraySum"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textArray1" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewArray2" />
 </android.support.constraint.ConstraintLayout>

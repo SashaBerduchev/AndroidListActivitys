@@ -8,17 +8,20 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
+import Arrays.Array;
+
 public class ArrayActivity extends AppCompatActivity {
 
-    TextView arraynum, array1, array2, sum;
+    TextView arraynum, array2, sum;
     Button btnArrayCalc;
     Animation animation;
+    TextView ArrayText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_array);
         arraynum = findViewById(R.id.editArray1);
-        array1 = findViewById(R.id.textArray1);
+        ArrayText = findViewById(R.id.ArrayText);
         array2 = findViewById(R.id.textViewArray2);
         sum = findViewById(R.id.ArraySum);
         btnArrayCalc = findViewById(R.id.btnArrayCalc);
@@ -32,12 +35,13 @@ public class ArrayActivity extends AppCompatActivity {
                 Integer num = Integer.parseInt(arraynum.getText().toString());
                 Integer[] arr;
 
-                Arrays.Array array = new Arrays.Array(num);
+                Array array = new Arrays.Array(num);
                 arr = array.setArray();
                 for (int i=0; i<arr.length; i++)
                 {
-                    array1.setText(arr[i]);
+                    ArrayText.setText(arr[i]);
                 }
+
 
             }
         });
