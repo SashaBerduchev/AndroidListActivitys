@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import Arrays.Array;
+import Arrays.ArrayFind;
+import Arrays.ArraySum;
 
 public class ArrayActivity extends AppCompatActivity {
 
@@ -16,6 +18,7 @@ public class ArrayActivity extends AppCompatActivity {
     Button btnArrayCalc;
     Animation animation;
     TextView ArrayText;
+    TextView textelemview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +28,7 @@ public class ArrayActivity extends AppCompatActivity {
         array2 = findViewById(R.id.textViewArray2);
         sum = findViewById(R.id.ArraySum);
         btnArrayCalc = findViewById(R.id.btnArrayCalc);
+        textelemview = findViewById(R.id.textElemView);
 
         animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.anim_scale);
         btnArrayCalc.startAnimation(animation);
@@ -42,6 +46,11 @@ public class ArrayActivity extends AppCompatActivity {
                     ArrayText.setText(arr[i]);
                 }
 
+                ArrayFind arrayFind = new ArrayFind(arr, num,  Integer.parseInt(textelemview.getText().toString()));
+                textelemview.setText(arrayFind.findIndex());
+
+                ArraySum arraySum = new ArraySum(arr, num);
+                sum.setText(arraySum.arraySum());
 
             }
         });
