@@ -11,6 +11,7 @@ import android.widget.TextView;
 import Arrays.Array;
 import Arrays.ArrayFind;
 import Arrays.ArraySum;
+import Arrays.ShiftRight;
 
 public class ArrayActivity extends AppCompatActivity {
 
@@ -51,6 +52,9 @@ public class ArrayActivity extends AppCompatActivity {
 
                 ArraySum arraySum = new ArraySum(arr, num);
                 sum.setText(arraySum.arraySum());
+
+                ShiftRight shiftRight = new ShiftRight();
+                shiftRight.setShiftRight(arr, num);
 
             }
         });

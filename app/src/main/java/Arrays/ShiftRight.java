@@ -15,6 +15,11 @@ public class ShiftRight {
             array[0] = temp;
         }
 
-        return array;
+        Integer newArr[] = new Integer[array.length];
+        for (int i = 0; i< array.length; i++){
+            newArr[i]= array[(i-k+ array.length)%array.length];
+        }
+
+        return  newArr;
     }
 }
