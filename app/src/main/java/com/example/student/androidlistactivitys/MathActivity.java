@@ -27,13 +27,21 @@ public class MathActivity extends AppCompatActivity {
         btnmatrix.startAnimation(animation);
 
 
-
         final Intent arrayactivity = new Intent(this, ArrayActivity.class);
+
+        final  Intent listactivity = new Intent(this, ListActivity.class);
 
         btnarray.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(arrayactivity);
+            }
+        });
+
+        btnlist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(listactivity);
             }
         });
     }

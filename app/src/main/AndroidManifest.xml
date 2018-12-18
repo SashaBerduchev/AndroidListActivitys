@@ -46,7 +46,8 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".ArrayCalcActivity" />
         <activity android:name=".MathActivity" />
-        <activity android:name=".ArrayActivity"></activity>
+        <activity android:name=".ArrayActivity" />
+        <activity android:name=".ListActivity"></activity>
     </application>
 
 </manifest>
