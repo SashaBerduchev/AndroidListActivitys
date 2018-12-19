@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CyclesActivity">
+
+    <TextView
+        android:id="@+id/textViewNum"
+        android:layout_width="168dp"
+        android:layout_height="38dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/textpoint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/textpoint"
+        android:layout_width="169dp"
+        android:layout_height="46dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNum" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="170dp"
+        android:layout_height="26dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textpoint" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="170dp"
+        android:layout_height="33dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/textFirstTask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textFirstTask"
+        android:layout_width="178dp"
+        android:layout_height="36dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/textSecondTask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/btnCycleDo"
+        android:layout_width="186dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="8dp"
+        android:text="Cycles"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTherdTask" />
+
+    <TextView
+        android:id="@+id/textSecondTask"
+        android:layout_width="178dp"
+        android:layout_height="30dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/textTherdTask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFirstTask" />
+
+    <TextView
+        android:id="@+id/textTherdTask"
+        android:layout_width="167dp"
+        android:layout_height="30dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/btnCycleDo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSecondTask" />
+</android.support.constraint.ConstraintLayout>

@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class MathActivity extends AppCompatActivity {
 
-    Button btnarray, btnlist, btnmatrix;
+    Button btnarray, btnlist, btnmatrix, btncycles;
     Animation animation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,16 +20,21 @@ public class MathActivity extends AppCompatActivity {
         btnarray = findViewById(R.id.btnArray);
         btnlist = findViewById(R.id.btnList);
         btnmatrix = findViewById(R.id.btnMatrix);
+        btncycles = findViewById(R.id.btnCycles);
 
         animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.anim_scale);
         btnarray.startAnimation(animation);
         btnlist.startAnimation(animation);
         btnmatrix.startAnimation(animation);
+        btncycles.startAnimation(animation);
 
 
         final Intent arrayactivity = new Intent(this, ArrayActivity.class);
 
         final  Intent listactivity = new Intent(this, ListActivity.class);
+
+        final  Intent cyclesactivity = new Intent(this, CyclesActivity.class);
+
 
         btnarray.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +47,14 @@ public class MathActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(listactivity);
+            }
+        });
+
+
+        btncycles.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(cyclesactivity);
             }
         });
     }

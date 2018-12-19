@@ -47,7 +47,8 @@
         <activity android:name=".ArrayCalcActivity" />
         <activity android:name=".MathActivity" />
         <activity android:name=".ArrayActivity" />
-        <activity android:name=".ListActivity"></activity>
+        <activity android:name=".ListActivity" />
+        <activity android:name=".CyclesActivity"></activity>
     </application>
 
 </manifest>
