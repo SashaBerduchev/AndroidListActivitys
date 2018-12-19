@@ -41,6 +41,9 @@ public class ArrayCalcActivity extends AppCompatActivity {
                 Integer[] arrx = new Integer[30];
                 Double[] arry = new Double[30];
                 Integer ion, ioff;
+
+
+
                 ion = parseInt(textarg1.getText().toString());
                 ioff = parseInt(textarg2.getText().toString());
                 LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[]{
