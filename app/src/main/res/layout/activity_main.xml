@@ -81,4 +81,14 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Math" />
 
+    <Button
+        android:id="@+id/btnrequestactivity"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="requestactivity"
+        app:layout_constraintBottom_toTopOf="@+id/listdat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOpen" />
+
 </android.support.constraint.ConstraintLayout>

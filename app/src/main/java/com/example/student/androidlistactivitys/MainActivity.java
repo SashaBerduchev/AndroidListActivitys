@@ -18,7 +18,7 @@ import static com.example.student.androidlistactivitys.R.*;
 public class MainActivity extends AppCompatActivity {
 
     static final int requestCodeActivity =2;
-    Button btnOpen;
+    Button btnOpen,  btnrequest;
     ListView listdat;
     Button btnaction;
     Button btnweb, btnmap, btncalc, btnmath;
@@ -51,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
         btnmap = findViewById(id.btnMap);
         btncalc = findViewById(id.btnCalc);
         btnmath = findViewById(id.btnMatrix);
+        btnrequest = findViewById(id.btnrequestactivity);
+
 
         list = new ArrayList<Person>();
         final Intent intent = getIntent();
@@ -67,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
 
         final Intent intentmath = new Intent(this, MathActivity.class);
 
+        final  Intent intentrequest = new Intent(this, RequaestActivity.class);
+
         String name = intent.getStringExtra(keyName);
         String sername = intent.getStringExtra(keySename);
         list.add(new Person(name, sername));
@@ -81,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         btnmap.startAnimation(btnanim);
         btncalc.startAnimation(btnanim);
         btnmath.startAnimation(btnanim);
+        btnrequest.startAnimation(btnanim);
 
         dbCreatorTool = new DBCreatorTool(this);
         db = dbCreatorTool.getWritableDatabase();
@@ -100,6 +105,16 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
+
+        btnrequest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intentrequest);
+            }
+        });
+
+
 
         btnaction.setOnClickListener(new View.OnClickListener() {
             @Override
