@@ -28,6 +28,12 @@ import android.view.View;
 import android.view.ViewOutlineProvider;
 import android.widget.ImageView;
 
+import static android.opengl.ETC1.getHeight;
+import static android.opengl.ETC1.getWidth;
+import static android.support.constraint.solver.widgets.Analyzer.invalidate;
+import static de.hdodenhof.circleimageview.CircleImageView.BITMAP_CONFIG;
+import static java.security.AccessController.getContext;
+
 public class CircleImageView {
 
     private static final ImageView.ScaleType SCALE_TYPE = ImageView.ScaleType.CENTER_CROP;
