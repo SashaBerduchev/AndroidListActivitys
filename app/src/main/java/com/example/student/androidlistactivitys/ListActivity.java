@@ -14,7 +14,7 @@ import Generic.Generic_Mask;
 public class ListActivity extends AppCompatActivity {
 
     TextView list1, list2, list3;
-    TextView intlist;
+    TextView intlist, intlist2;
     Button btnList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,7 @@ public class ListActivity extends AppCompatActivity {
         list2 = findViewById(R.id.editTextList2);
         list3 = findViewById(R.id.editTextList3);
         intlist = findViewById(R.id.intList);
+        intlist2 = findViewById(R.id.intList2);
         btnList = findViewById(R.id.btnList);
 
         btnList.setOnClickListener(new View.OnClickListener() {
@@ -32,7 +33,7 @@ public class ListActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Generic_Class generic_class = new Generic_Class();
                 intlist.setText(generic_class.SetGenericInt(Integer.parseInt(list1.getText().toString())));
-                intlist.setText(generic_class.SetGenericString(list2.getText().toString()));
+                intlist2.setText(generic_class.SetGenericString(list2.getText().toString()));
 
                 Generic_Collection generic_collection = new Generic_Collection();
                 generic_collection.Collection(list2.getText().toString());

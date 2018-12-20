@@ -47,9 +47,12 @@ public class ArrayActivity extends AppCompatActivity {
                 Integer[] arr2;
                 Array array = new Arrays.Array(num);
                 arr = array.setArray();
-                for (int i=0; i<arr.length; i++) {
+                for (int i=0; i<arr.length; i++)
+                {
                     ArrayText.setText(arr[i]);
                 }
+
+
 
                 arr2 = array.PereborIndexArray();
                 for (int i=0; i<arr.length; i++) {
