@@ -51,7 +51,6 @@
         <activity android:name=".ListActivity" />
         <activity android:name=".CyclesActivity" />
         <activity android:name=".RequaestActivity" />
-        <activity android:name=".CircleViewActivity"></activity>
     </application>
 
 </manifest>

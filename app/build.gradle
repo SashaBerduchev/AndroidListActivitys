@@ -43,4 +43,3 @@ dependencies {
     compileOnly 'com.android.support:support-annotations:27.1.0'
 
 }
-
