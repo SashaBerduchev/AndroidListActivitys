@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnOpen,  btnrequest;
     ListView listdat;
     Button btnaction;
-    Button btnweb, btnmap, btncalc, btnmath;
+    Button btnweb, btnmap, btncalc, btnmath, btnrecycleactivity;
 
 
 
@@ -47,11 +47,12 @@ public class MainActivity extends AppCompatActivity {
         btnOpen = findViewById(R.id.btnOpen);
         listdat = findViewById(R.id.listdat);
         btnaction = findViewById(id.btnAction);
-        btnweb = findViewById(id.btnWeb);
-        btnmap = findViewById(id.btnMap);
-        btncalc = findViewById(id.btnCalc);
-        btnmath = findViewById(id.btnMatrix);
-        btnrequest = findViewById(id.btnrequestactivity);
+        btnweb = findViewById(R.id.btnWeb);
+        btnmap = findViewById(R.id.btnMap);
+        btncalc = findViewById(R.id.btnCalc);
+        btnmath = findViewById(R.id.btnMatrix);
+        btnrequest = findViewById(R.id.btnrequestactivity);
+        btnrecycleactivity = findViewById(R.id.btnRecycle);
 
 
         list = new ArrayList<Person>();
@@ -71,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
 
         final  Intent intentrequest = new Intent(this, RequaestActivity.class);
 
+        final  Intent intentrecycleactivity = new Intent(this, ResycleListActivity.class);
+
         String name = intent.getStringExtra(keyName);
         String sername = intent.getStringExtra(keySename);
         list.add(new Person(name, sername));
@@ -86,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
         btncalc.startAnimation(btnanim);
         btnmath.startAnimation(btnanim);
         btnrequest.startAnimation(btnanim);
+       // btnrecycleactivity.startAnimation(animation);
 
         dbCreatorTool = new DBCreatorTool(this);
         db = dbCreatorTool.getWritableDatabase();
@@ -150,6 +154,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(intentmath);
+            }
+        });
+
+        btnrecycleactivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intentrecycleactivity);
             }
         });
 

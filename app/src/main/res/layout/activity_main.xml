@@ -88,6 +88,17 @@
         android:text="requestactivity"
         app:layout_constraintBottom_toTopOf="@+id/listdat"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnRecycle"
+        app:layout_constraintTop_toBottomOf="@+id/btnOpen"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnRecycle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recycle"
+        app:layout_constraintBottom_toTopOf="@+id/listdat"
+        app:layout_constraintEnd_toStartOf="@+id/btnrequestactivity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnOpen" />
 

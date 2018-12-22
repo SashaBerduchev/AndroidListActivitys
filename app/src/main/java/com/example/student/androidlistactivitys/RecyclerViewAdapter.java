@@ -3,9 +3,12 @@ package com.example.student.androidlistactivitys;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -19,17 +22,22 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @NonNull
     @Override
     public RecyclerViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        final View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.resyclerview_layout, parent, false);
+        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerViewAdapter.ViewHolder holder, int position) {
-
+    public void onBindViewHolder(@NonNull RecyclerViewAdapter.ViewHolder viewHolder, int position) {
+        viewHolder.Name.setText(list.get(position).getName());
+        viewHolder.Sername.setText(list.get(position).getSername());
+        viewHolder.Age.setText(list.get(position).getAge());
+        viewHolder.Weight.setText(list.get(position).getHeight());
+        viewHolder.Height.setText(list.get(position).getHeight());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return list.size();
     }
 
 public class ViewHolder extends RecyclerView.ViewHolder{
