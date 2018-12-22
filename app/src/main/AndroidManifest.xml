@@ -51,6 +51,7 @@
         <activity android:name=".ListActivity" />
         <activity android:name=".CyclesActivity" />
         <activity android:name=".RequaestActivity" />
+        <activity android:name=".ResycleListActivity"></activity>
     </application>
 
 </manifest>
