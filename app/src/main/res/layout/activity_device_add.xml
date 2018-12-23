@@ -4,46 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MathActivity">
+    tools:context=".DeviceAddActivity">
 
     <Button
-        android:id="@+id/btnArray"
+        android:id="@+id/btnComputers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="372dp"
-        android:text="Array"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnTablets" />
-
-    <Button
-        android:id="@+id/btnList"
-        android:layout_width="wrap_content"
-        android:layout_height="43dp"
-        android:text="List"
-        app:layout_constraintBottom_toTopOf="@+id/btnCycles"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnArray" />
-
-    <Button
-        android:id="@+id/btnMatrix"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Matrix"
-        app:layout_constraintBottom_toTopOf="@+id/btnArray"
+        android:text="Computers"
+        app:layout_constraintBottom_toTopOf="@+id/btnPhones"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnCycles"
+        android:id="@+id/btnPhones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cycles"
+        android:text="Phones"
+        app:layout_constraintBottom_toTopOf="@+id/btnTablets"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnComputers" />
+
+    <Button
+        android:id="@+id/btnTablets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tablets"
+        app:layout_constraintBottom_toTopOf="@+id/btnLaptops"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPhones" />
+
+    <Button
+        android:id="@+id/btnLaptops"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Laptops"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnList" />
+        app:layout_constraintTop_toBottomOf="@+id/btnTablets" />
 </android.support.constraint.ConstraintLayout>

@@ -15,7 +15,7 @@ public class ListActivity extends AppCompatActivity {
 
     TextView list1, list2, list3;
     TextView intlist, intlist2;
-    Button btnList;
+    Button btnList, btndevice;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +27,9 @@ public class ListActivity extends AppCompatActivity {
         intlist = findViewById(R.id.intList);
         intlist2 = findViewById(R.id.intList2);
         btnList = findViewById(R.id.btnList);
+        btndevice = findViewById(R.id.btnDevice);
+
+        final Intent deviceintent = new Intent(this, DeviceActivity.class);
 
         btnList.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +45,14 @@ public class ListActivity extends AppCompatActivity {
                 Generic_Mask generic_mask = new Generic_Mask();
                 list3.setText(String.valueOf(generic_mask.setMask(Integer.parseInt(list1.getText().toString()), list2.getText().toString(), Double.parseDouble(list3.getText().toString()))));
 
+            }
+
+        });
+
+        btndevice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(deviceintent);
             }
         });
 

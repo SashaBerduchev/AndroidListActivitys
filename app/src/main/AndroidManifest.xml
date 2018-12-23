@@ -51,7 +51,11 @@
         <activity android:name=".ListActivity" />
         <activity android:name=".CyclesActivity" />
         <activity android:name=".RequaestActivity" />
-        <activity android:name=".ResycleListActivity"></activity>
+        <activity android:name=".ResycleListActivity" />
+        <activity android:name=".DeviceActivity" />
+        <activity android:name=".DeviceAddActivity" />
+        <activity android:name=".PhoneAdd" />
+        <activity android:name=".ComputerAdd"></activity>
     </application>
 
 </manifest>
