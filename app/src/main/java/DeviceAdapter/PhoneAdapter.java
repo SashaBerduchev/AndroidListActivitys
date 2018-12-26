@@ -58,12 +58,12 @@ public class PhoneAdapter extends RecyclerView.Adapter<PhoneAdapter.ViewHolder> 
 
        public ViewHolder(@NonNull View itemView) {
            super(itemView);
-           Name = itemView.findViewById(R.id.rv_phone_name);
-           Model = itemView.findViewById(R.id.rv_phone_model);
-           Processor = itemView.findViewById(R.id.rv_phone_proccessor);
-           Ram = itemView.findViewById(R.id.rv_phone_ram);
-           Graphics = itemView.findViewById(R.id.rv_phone_graphicscore);
-           Battery = itemView.findViewById(R.id.rv_phone_battery);
+           Name = itemView.findViewById(R.id.rv_computer_name);
+           Model = itemView.findViewById(R.id.rv_computer_model);
+           Processor = itemView.findViewById(R.id.rv_computer_proccessor);
+           Ram = itemView.findViewById(R.id.rv_computer_ram);
+           Graphics = itemView.findViewById(R.id.rv_computer_graphicscore);
+           Battery = itemView.findViewById(R.id.rv_computer_battery);
            Cost = itemView.findViewById(R.id.rv_phone_cost);
        }
    }

@@ -1,6 +1,7 @@
 package Device;
 
 public class Computers {
+
     private String Name;
     private String Model;
     private String Processor;

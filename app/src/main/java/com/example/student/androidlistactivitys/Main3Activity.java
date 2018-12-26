@@ -30,7 +30,7 @@ public class Main3Activity extends AppCompatActivity {
 
 
         btnset= findViewById(R.id.btnSet);
-        nametext = findViewById(R.id.nameText);
+        nametext = findViewById(R.id.textName);
         modelText = findViewById(R.id.modelText);
         prodtext = findViewById(R.id.prodText);
 

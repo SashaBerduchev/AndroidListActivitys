@@ -11,6 +11,7 @@ import android.widget.Button;
 
 import java.util.ArrayList;
 
+import Device.Computers;
 import Device.Phones;
 
 public class DeviceActivity extends AppCompatActivity {
@@ -29,7 +30,18 @@ public class DeviceActivity extends AppCompatActivity {
     static final Integer keyBattery = 10;
     static final Integer keyCost = 20;
 
+    public  static  String keyNameComputer;
+    public  static  String keyModelComputer;
+    public  static  String keyProcessorComputer;
+    public  static  Integer keyCoresComputer;
+    public  static  String keyGraphicsComputer;
+    public  static  Integer keyCostComputer;
+
+
+
+
     ArrayList<Phones> phonesArrayList;
+    ArrayList<Computers> computersArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +51,7 @@ public class DeviceActivity extends AppCompatActivity {
         btnadd = findViewById(R.id.btnAddAction);
         recycleViewDevice = findViewById(R.id.recycleViewDevice);
         phonesArrayList = new ArrayList<>();
+        computersArrayList = new ArrayList<>();
 
 
         final Intent addintent = new Intent(this, DeviceAddActivity.class);
@@ -52,11 +65,20 @@ public class DeviceActivity extends AppCompatActivity {
         Integer battery= intent.getIntExtra("10", keyBattery);
         Integer cost= intent.getIntExtra("20", keyCost);
 
+        String namecomp = intent.getStringExtra(keyNameComputer);
+        String modelcomp = intent.getStringExtra(keyModelComputer);
+        String proccomp = intent.getStringExtra(keyProcessorComputer);
+        Integer corescomp = intent.getIntExtra("20", keyCoresComputer);
+        String graphicscomp = intent.getStringExtra(keyGraphicsComputer);
+        Integer costcomp = intent.getIntExtra("30", keyCostComputer);
+
         phonesArrayList.add(new Phones(name, model, processor, ram, graphics, battery, cost));
+        computersArrayList.add(new Computers(namecomp, modelcomp, proccomp, corescomp, graphicscomp, costcomp));
 
         layoutManager = new LinearLayoutManager(this);
         recycleViewDevice.setLayoutManager(layoutManager);
         recycleViewDevice.setAdapter(adapter);
+
 
         btnadd.setOnClickListener(new View.OnClickListener() {
             @Override
