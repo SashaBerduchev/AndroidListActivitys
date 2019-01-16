@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         btncalc.startAnimation(btnanim);
         btnmath.startAnimation(btnanim);
         btnrequest.startAnimation(btnanim);
-       // btnrecycleactivity.startAnimation(animation);
+        btnrecycleactivity.startAnimation(animation);
 
         dbCreatorTool = new DBCreatorTool(this);
         db = dbCreatorTool.getWritableDatabase();

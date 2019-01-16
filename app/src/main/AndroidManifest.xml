@@ -3,7 +3,6 @@
     package="com.example.student.androidlistactivitys">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -55,7 +54,7 @@
         <activity android:name=".DeviceActivity" />
         <activity android:name=".DeviceAddActivity" />
         <activity android:name=".PhoneAdd" />
-        <activity android:name=".ComputerAdd"></activity>
+        <activity android:name=".ComputerAdd" />
     </application>
 
 </manifest>
