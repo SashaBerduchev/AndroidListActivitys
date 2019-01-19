@@ -35,6 +35,7 @@ public class MathActivity extends AppCompatActivity {
 
         final  Intent cyclesactivity = new Intent(this, CyclesActivity.class);
 
+        final Intent matrixactivity = new Intent(this, MatrixActivity.class);
 
         btnarray.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +56,13 @@ public class MathActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(cyclesactivity);
+            }
+        });
+
+        btnmatrix.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(matrixactivity);
             }
         });
     }
