@@ -56,8 +56,8 @@
         android:text="Map"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnWeb"
-        app:layout_constraintTop_toBottomOf="@+id/listdat" />
+        app:layout_constraintTop_toBottomOf="@+id/listdat"
+        app:layout_constraintVertical_bias="0.69" />
 
     <Button
         android:id="@+id/btnCalc"
@@ -101,5 +101,19 @@
         app:layout_constraintEnd_toStartOf="@+id/btnrequestactivity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnOpen" />
+
+    <Button
+        android:id="@+id/btnShapeActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnMap"
+        app:layout_constraintStart_toEndOf="@+id/btnWeb"
+        app:layout_constraintTop_toBottomOf="@+id/listdat" />
 
 </android.support.constraint.ConstraintLayout>

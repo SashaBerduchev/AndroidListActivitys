@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnOpen,  btnrequest;
     ListView listdat;
     Button btnaction;
-    Button btnweb, btnmap, btncalc, btnmath, btnrecycleactivity;
+    Button btnweb, btnmap, btncalc, btnmath, btnrecycleactivity, btnShape;
 
 
 
@@ -53,9 +53,9 @@ public class MainActivity extends AppCompatActivity {
         btnmath = findViewById(R.id.btnMatrix);
         btnrequest = findViewById(R.id.btnrequestactivity);
         btnrecycleactivity = findViewById(R.id.btnRecycle);
+        btnShape = findViewById(id.btnShapeActivity);
 
-
-        list = new ArrayList<Person>();
+                list = new ArrayList<Person>();
         final Intent intent = getIntent();
 
         final Intent intents = new Intent(this, Main2Activity.class);
@@ -73,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
         final  Intent intentrequest = new Intent(this, RequaestActivity.class);
 
         final  Intent intentrecycleactivity = new Intent(this, ResycleListActivity.class);
+
+        final Intent intentshape = new Intent(this, ShapeViewActivity.class);
 
         String name = intent.getStringExtra(keyName);
         String sername = intent.getStringExtra(keySename);
@@ -164,6 +166,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnShape.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intentshape);
+            }
+        });
+
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -183,9 +192,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-
     }
-
 
 }
 
