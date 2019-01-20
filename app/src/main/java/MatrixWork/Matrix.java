@@ -15,7 +15,7 @@ public class Matrix {
         matrix = new Integer[column][row];
     }
 
-    public  void AddMatrix()
+    public  Integer[][] AddMatrix()
     {
         for(int i=0; i<matrix.length; i++)
         {
@@ -35,6 +35,8 @@ public class Matrix {
                 write.setMatrixStream(matrix[i][j].toString());
             }
         }
+
+        return  matrix;
 
     }
 }

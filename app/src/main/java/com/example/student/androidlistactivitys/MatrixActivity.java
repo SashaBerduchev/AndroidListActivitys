@@ -12,6 +12,7 @@ public class MatrixActivity extends AppCompatActivity {
 
     Button btnmatrixcalc;
     TextView columntext, rowtext;
+    TextView matrixview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,12 +21,24 @@ public class MatrixActivity extends AppCompatActivity {
         btnmatrixcalc = findViewById(R.id.btnMatrixCalc);
         columntext = findViewById(R.id.columnText);
         rowtext = findViewById(R.id.rowText);
-
+        matrixview  = findViewById(R.id.matrixView);
         btnmatrixcalc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Matrix matrix = new Matrix(Integer.getInteger(columntext.getText().toString()), Integer.getInteger(rowtext.getText().toString()));
-                matrix.AddMatrix();
+
+                Integer column = Integer.getInteger(columntext.getText().toString());
+                Integer row = Integer.getInteger(rowtext.getText().toString());
+                Integer[][] matrixarray;
+                Matrix matrix = new Matrix(column, row);
+                matrixarray =  matrix.AddMatrix();
+
+                for (int i=0; i<matrixarray.length; i++)
+                {
+                    for (int j=0; j<matrixarray[i].length; j++)
+                    {
+                        matrixview.setText(matrixarray[i][j]);
+                    }
+                }
             }
         });
     }

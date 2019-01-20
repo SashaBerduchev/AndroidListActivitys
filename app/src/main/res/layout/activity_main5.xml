@@ -36,10 +36,10 @@
         android:layout_height="wrap_content"
         android:text="WebContent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnWebActivity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/webHtmlText"
-        app:layout_constraintVertical_bias="0.862" />
+        app:layout_constraintVertical_bias="0.863" />
 
     <WebView
         android:id="@+id/webView"
@@ -49,5 +49,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/webHtmlText" />
+
+    <Button
+        android:id="@+id/btnWebActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WebAction"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnWebContent"
+        app:layout_constraintTop_toBottomOf="@+id/webView" />
 
 </android.support.constraint.ConstraintLayout>
