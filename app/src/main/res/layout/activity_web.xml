@@ -12,61 +12,30 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/urlString3"
         app:layout_constraintEnd_toStartOf="@+id/iterText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/urlString3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/urlString4"
+    <WebView
+        android:id="@+id/webView2"
+        android:layout_width="414dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/webView3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.367"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/urlString2" />
 
-    <EditText
-        android:id="@+id/urlString4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/webView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/urlString3" />
-
-    <WebView
-        android:id="@+id/webView2"
-        android:layout_width="382dp"
-        android:layout_height="162dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/webView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/urlString4" />
-
     <WebView
         android:id="@+id/webView3"
-        android:layout_width="355dp"
+        android:layout_width="442dp"
         android:layout_height="115dp"
         app:layout_constraintBottom_toTopOf="@+id/webView4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/webView2" />
-
-    <WebView
-        android:id="@+id/webView4"
-        android:layout_width="395dp"
-        android:layout_height="146dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnWebSet"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/webView3" />
 
     <Button
         android:id="@+id/btnWebSet"
@@ -76,7 +45,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/webView4" />
+        app:layout_constraintTop_toBottomOf="@+id/webView5" />
 
     <EditText
         android:id="@+id/iterText"
@@ -84,8 +53,25 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/urlString3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/urlString2"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <WebView
+        android:id="@+id/webView4"
+        android:layout_width="464dp"
+        android:layout_height="94dp"
+        app:layout_constraintBottom_toTopOf="@+id/webView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/webView3" />
+
+    <WebView
+        android:id="@+id/webView5"
+        android:layout_width="464dp"
+        android:layout_height="161dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnWebSet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/webView4" />
 </android.support.constraint.ConstraintLayout>

@@ -9,13 +9,12 @@
     <com.github.florent37.shapeofview.shapes.TriangleView
         android:id="@+id/triangleView"
         android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_height="149dp"
 
         android:elevation="4dp"
         app:layout_constraintBottom_toTopOf="@+id/circleView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TriangleView"
         app:triangle_percentBottom="0.5"
         app:triangle_percentLeft="0"
         app:triangle_percentRight="0" />
@@ -25,13 +24,14 @@
         android:layout_width="150dp"
 
         android:layout_height="150dp"
+        android:layout_marginTop="372dp"
         android:elevation="4dp"
         app:circle_borderColor="@android:color/black"
         app:circle_borderWidth="2dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/triangleView" />
+
 
 
 </android.support.constraint.ConstraintLayout>

@@ -19,6 +19,7 @@ public class ShapeViewActivity extends AppCompatActivity {
         triangleView = findViewById(R.id.triangleView);
         circleView = findViewById(R.id.circleView);
 
+
         triangleView.setClipPathCreator(new ClipPathManager.ClipPathCreator() {
             @Override
             public Path createClipPath(int width, int height) {
@@ -45,7 +46,6 @@ public class ShapeViewActivity extends AppCompatActivity {
                 return path;
             }
         });
-
 
 
     }
