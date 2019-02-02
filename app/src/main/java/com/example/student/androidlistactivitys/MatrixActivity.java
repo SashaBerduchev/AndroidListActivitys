@@ -1,5 +1,6 @@
 package com.example.student.androidlistactivitys;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +11,7 @@ import MatrixWork.Matrix;
 
 public class MatrixActivity extends AppCompatActivity {
 
-    Button btnmatrixcalc;
+    Button btnmatrixcalc, imagematrix;
     TextView columntext, rowtext;
     TextView matrixview;
     @Override
@@ -22,6 +23,8 @@ public class MatrixActivity extends AppCompatActivity {
         columntext = findViewById(R.id.columnText);
         rowtext = findViewById(R.id.rowText);
         matrixview  = findViewById(R.id.matrixView);
+        imagematrix = findViewById(R.id.btnImageMatrix);
+        final Intent intent = new Intent(this, ImageMatrixActivity.class);
         btnmatrixcalc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,6 +42,13 @@ public class MatrixActivity extends AppCompatActivity {
                         matrixview.setText(matrixarray[i][j]);
                     }
                 }
+
+                btnmatrixcalc.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        startActivity(intent);
+                    }
+                });
             }
         });
     }
