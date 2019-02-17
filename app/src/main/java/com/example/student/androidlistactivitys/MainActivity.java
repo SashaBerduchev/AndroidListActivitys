@@ -1,6 +1,7 @@
 package com.example.student.androidlistactivitys;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -10,9 +11,15 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import com.muddzdev.styleabletoast.StyleableToast;
 
 import java.util.ArrayList;
 
+import es.dmoral.toasty.Toasty;
+
+import static androidx.core.content.ContextCompat.startActivity;
 import static com.example.student.androidlistactivitys.R.*;
 
 public class MainActivity extends AppCompatActivity {
@@ -126,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(intent1);
+                Toasty.success(getApplicationContext(), "Success!", Toast.LENGTH_SHORT, true).show();
             }
         });
 
@@ -134,6 +142,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(intent2);
+                Toasty.success(getApplicationContext(), "Success!", Toast.LENGTH_SHORT, true).show();
+                StyleableToast.makeText(getApplicationContext(),"Hello World!", Toast.LENGTH_LONG, style.defaultStyle).show();
             }
         });
 
@@ -142,6 +152,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(intentmap);
+                Toasty.success(getApplicationContext(), "Success!", Toast.LENGTH_SHORT, true).show();
+
+                StyleableToast.makeText(getApplicationContext(),"Hello World!", Toast.LENGTH_LONG, style.defaultStyle).show();
             }
         });
 
@@ -149,6 +162,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(intentcalc);
+                Toasty.success(getApplicationContext(), "Success!", Toast.LENGTH_SHORT, true).show();
+                StyleableToast.makeText(getApplicationContext(),"Hello World!", Toast.LENGTH_LONG, style.defaultStyle).show();
             }
         });
 
@@ -156,6 +171,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(intentmath);
+                Toasty.success(getApplicationContext(), "Success!", Toast.LENGTH_SHORT, true).show();
             }
         });
 
@@ -163,6 +179,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(intentrecycleactivity);
+                Toasty.success(getApplicationContext(), "Success!", Toast.LENGTH_SHORT, true).show();
             }
         });
 
@@ -170,6 +187,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(intentshape);
+                Toasty.success(getApplicationContext(), "Success!", Toast.LENGTH_SHORT, true).show();
             }
         });
 
