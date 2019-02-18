@@ -13,7 +13,7 @@ import Arrays.Array;
 import Arrays.ArrayFind;
 import Arrays.ArraySum;
 import Arrays.ShiftRight;
-import androidx.appcompat.app.AppCompatActivity;
+
 
 public class ArrayActivity extends AppCompatActivity {
 

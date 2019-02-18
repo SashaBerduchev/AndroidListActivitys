@@ -13,13 +13,13 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.muddzdev.styleabletoast.StyleableToast;
+
 
 import java.util.ArrayList;
 
 import es.dmoral.toasty.Toasty;
 
-import static androidx.core.content.ContextCompat.startActivity;
+
 import static com.example.student.androidlistactivitys.R.*;
 
 public class MainActivity extends AppCompatActivity {
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(intent2);
                 Toasty.success(getApplicationContext(), "Success!", Toast.LENGTH_SHORT, true).show();
-                StyleableToast.makeText(getApplicationContext(),"Hello World!", Toast.LENGTH_LONG, style.defaultStyle).show();
+
             }
         });
 
@@ -154,7 +154,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intentmap);
                 Toasty.success(getApplicationContext(), "Success!", Toast.LENGTH_SHORT, true).show();
 
-                StyleableToast.makeText(getApplicationContext(),"Hello World!", Toast.LENGTH_LONG, style.defaultStyle).show();
             }
         });
 
@@ -163,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(intentcalc);
                 Toasty.success(getApplicationContext(), "Success!", Toast.LENGTH_SHORT, true).show();
-                StyleableToast.makeText(getApplicationContext(),"Hello World!", Toast.LENGTH_LONG, style.defaultStyle).show();
+
             }
         });
 

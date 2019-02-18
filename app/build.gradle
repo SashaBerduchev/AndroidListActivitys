@@ -45,5 +45,5 @@ dependencies {
     implementation 'com.github.florent37:shapeofview:1.0.4'
 
     implementation 'com.github.GrenderG:Toasty:1.4.0'
-    implementation 'com.muddzdev:styleabletoast:2.2.1'
+
 }
