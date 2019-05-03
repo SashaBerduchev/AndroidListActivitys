@@ -18,7 +18,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ImageMatrixActivity"></activity>
+        <activity android:name=".NotepadActivity"></activity>
+        <activity android:name=".ImageMatrixActivity" />
         <activity android:name=".ShapeViewActivity" />
         <activity android:name=".WebActivity" />
         <activity android:name=".MatrixActivity" />

@@ -25,7 +25,7 @@ import static com.example.student.androidlistactivitys.R.*;
 public class MainActivity extends AppCompatActivity {
 
     static final int requestCodeActivity =2;
-    Button btnOpen,  btnrequest;
+    Button btnOpen,  btnrequest, notepadBttn;
     ListView listdat;
     Button btnaction;
     Button btnweb, btnmap, btncalc, btnmath, btnrecycleactivity, btnShape;
@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         btnrequest = findViewById(R.id.btnrequestactivity);
         btnrecycleactivity = findViewById(R.id.btnRecycle);
         btnShape = findViewById(id.btnShapeActivity);
+        notepadBttn = findViewById(id.notepadButton);
 
                 list = new ArrayList<Person>();
         final Intent intent = getIntent();
@@ -82,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
         final  Intent intentrecycleactivity = new Intent(this, ResycleListActivity.class);
 
         final Intent intentshape = new Intent(this, ShapeViewActivity.class);
+
+        final  Intent intentnotepadactivity = new Intent(this, NotepadActivity.class);
 
         String name = intent.getStringExtra(keyName);
         String sername = intent.getStringExtra(keySename);
@@ -187,6 +190,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 startActivity(intentshape);
                 Toasty.success(getApplicationContext(), "Success!", Toast.LENGTH_SHORT, true).show();
+            }
+        });
+
+        notepadBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intentnotepadactivity);
             }
         });
 

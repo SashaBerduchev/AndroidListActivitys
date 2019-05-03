@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AndroidListActivitys</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_notepad">NotepadActivity</string>
 </resources>
