@@ -38,9 +38,9 @@ public class ResycleListActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String name = textname.getText().toString();
                 String sername =  textsername.getText().toString();
-                Integer age =Integer.parseInt(textage.getText().toString());
-                Integer heigt = Integer.parseInt(textheight.getText().toString());
-                Integer weight = Integer.parseInt(textweight.getText().toString());
+                String age = String.valueOf(textage.getText());
+                String heigt = String.valueOf(textheight.getText());
+                String weight = String.valueOf(textweight.getText());
                 list.add(new Humen(name, sername, age, heigt, weight));
 
                 recycleViewAdapter = new RecyclerViewAdapter(list);
