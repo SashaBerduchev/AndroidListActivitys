@@ -63,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
         btnShape = findViewById(id.btnShapeActivity);
         notepadBttn = findViewById(id.notepadButton);
 
-                list = new ArrayList<Person>();
+        list = new ArrayList<Person>();
+
         final Intent intent = getIntent();
 
         final Intent intents = new Intent(this, Main2Activity.class);
@@ -101,7 +102,8 @@ public class MainActivity extends AppCompatActivity {
         btncalc.startAnimation(btnanim);
         btnmath.startAnimation(btnanim);
         btnrequest.startAnimation(btnanim);
-        //btnrecycleactivity.startAnimation(animation);
+        btnrecycleactivity.startAnimation(btnanim);
+        notepadBttn.startAnimation(btnanim);
 
         dbCreatorTool = new DBCreatorTool(this);
         db = dbCreatorTool.getWritableDatabase();

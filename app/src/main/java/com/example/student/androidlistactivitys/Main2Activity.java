@@ -53,9 +53,6 @@ public class Main2Activity extends AppCompatActivity {
                 setResult(RESULT_OK, intentRequest);
 
                 finish();
-
-
-
             }
         });
 
