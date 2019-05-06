@@ -19,13 +19,14 @@
 
     <EditText
         android:id="@+id/editTextDescription"
-        android:layout_width="389dp"
-        android:layout_height="566dp"
+        android:layout_width="354dp"
+        android:layout_height="118dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/btnSave"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.315"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTitle" />
 
