@@ -6,11 +6,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
 import java.io.IOException;
 
+import es.dmoral.toasty.Toasty;
 import okhttp3.Request;
 import okhttp3.Response;
 import okio.GzipSource;
@@ -46,23 +48,25 @@ public class RequaestActivity extends AppCompatActivity {
         urltext = findViewById(R.id.editTextUrl);
         btnset = findViewById(R.id.btnSet);
         textanswer = findViewById(R.id.textAnswer);
-
+        String url = urltext.getText().toString();
         btnset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try{
-                            execute(urltext.getText().toString());
-                        }catch (IOException e){
-                            e.printStackTrace();
+                if (url.indexOf("http")>=0) {
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                execute(url);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
                         }
-                    }
-                })
-                .start();
-
+                    })
+                            .start();
+                } else {
+                    Toasty.error(getApplicationContext(), "Vrong http request", Toast.LENGTH_SHORT, true).show();
+                }
             }
         });
 

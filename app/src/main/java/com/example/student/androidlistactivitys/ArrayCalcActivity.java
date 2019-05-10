@@ -38,32 +38,26 @@ public class ArrayCalcActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Integer[] arrx = new Integer[30];
-                Double[] arry = new Double[30];
+                Integer[] arrx = new Integer[450];
+                Double[] arry = new Double[450];
                 Integer ion, ioff;
-
-
 
                 ion = parseInt(textarg1.getText().toString());
                 ioff = parseInt(textarg2.getText().toString());
-                LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[]{
-                        new DataPoint(ion, Math.pow(ion, 3)),
-                        new DataPoint(ioff, Math.pow(ioff, 3))
-                });
-                graphView.addSeries(series);
-
-                for (Integer i = ion; i < ioff; i++) {
+                for (int i = ion; i < ioff; i++){
                     arrx[i] = i;
-                    arry[i] = Math.pow(i, 2);
-
                 }
-
-                for (Integer i = ion; i < ioff; i++) {
-
-
+                for (int j = ion; j<ioff; j++){
+                   arry[j]=Math.pow(arrx[j], 2);
                 }
-
-
+                for (int k=0; k<arrx.length-1; k++){
+                    if (arrx.length == arry.length){
+                        LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[]{
+                                new DataPoint(arrx[k], arry[k])
+                        });
+                        graphView.addSeries(series);
+                    }
+                }
             }
         });
     }

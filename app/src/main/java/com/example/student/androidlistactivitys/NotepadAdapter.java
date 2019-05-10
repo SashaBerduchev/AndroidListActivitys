@@ -45,8 +45,8 @@ public class NotepadAdapter extends BaseAdapter {
 
         Notes notesarr = notepadList.get(position);
 
-        title.setText(String.valueOf(notesarr.getTitle()));
-        description.setText(String.valueOf(notesarr.getDescription()));
+        title.setText(String.valueOf(notesarr.title));
+        description.setText(String.valueOf(notesarr.description));
         return view;
     }
 }

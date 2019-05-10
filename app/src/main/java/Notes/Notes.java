@@ -2,8 +2,8 @@ package Notes;
 
 public class Notes {
 
-    String title;
-    String description;
+    public String title;
+    public String description;
     public Notes(String title, String description)
     {
         this.title = title;
