@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <resources>
+        <string android:name="app_name">Database</string>
+
+        <string android:name="hello_world">Database Application</string>
+        <string android:name="action_settings">Settings</string>
+        <string android:name="input1">Input</string>
+        <string android:name="input2">Input</string>
+        <string android:name="submit">Submit</string>
+    </resources>
+</android.support.constraint.ConstraintLayout>

@@ -3,6 +3,7 @@ package com.example.student.androidlistactivitys;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,13 +11,16 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 
 
 import java.util.ArrayList;
 
+import DataBaseHelpers.Main2ActivityDataBase;
 import es.dmoral.toasty.Toasty;
 
 
@@ -43,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     DBCreatorTool dbCreatorTool;
     SQLiteDatabase db;
-
+    Main2ActivityDataBase dataBase;
     private static final String NAME_TABLE = "ListTable";
 
     @Override
@@ -62,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         btnrecycleactivity = findViewById(R.id.btnRecycle);
         btnShape = findViewById(id.btnShapeActivity);
         notepadBttn = findViewById(id.notepadButton);
-
+        dataBase = new Main2ActivityDataBase(this);
         list = new ArrayList<Person>();
 
         final Intent intent = getIntent();
@@ -89,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
         String name = intent.getStringExtra(keyName);
         String sername = intent.getStringExtra(keySename);
+        getData();
         list.add(new Person(name, sername));
         adapter = new AdapterData(list, getApplicationContext());
         listdat.setAdapter(adapter);
@@ -203,6 +208,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    private void getData() {
+        Cursor cursor = dataBase.fetchData();
+        ListAdapter myAdapter = new SimpleCursorAdapter(this, R.layout.tasks, cursor,
+                new String[]{dataBase._ID, dataBase.COLUMN_1, dataBase.COLUMN_2},
+                new int[]{R.id.idnum,R.id.c1,R.id.c2},0);
+        listdat.setAdapter(myAdapter);
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
