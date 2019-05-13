@@ -93,11 +93,10 @@ public class MainActivity extends AppCompatActivity {
 
         String name = intent.getStringExtra(keyName);
         String sername = intent.getStringExtra(keySename);
-        getData();
         list.add(new Person(name, sername));
         adapter = new AdapterData(list, getApplicationContext());
         listdat.setAdapter(adapter);
-
+        getData();
         btnanim = AnimationUtils.loadAnimation(getApplicationContext(), anim.anim_scale);
 
         btnOpen.startAnimation(btnanim);
