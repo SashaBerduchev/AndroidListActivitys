@@ -9,8 +9,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
+import DataBaseHelpers.NotesDBHelper;
+
 public class NotesActivity extends AppCompatActivity {
 
+    NotesDBHelper dbHelper;
     TextView editTextTitle;
     TextView editTextDescription;
     Button btnSave;
@@ -26,7 +29,7 @@ public class NotesActivity extends AppCompatActivity {
         editTextTitle = findViewById(R.id.editTextTitle);
         editTextDescription = findViewById(R.id.editTextDescription);
         btnSave = findViewById(R.id.btnSave);
-
+        dbHelper = new NotesDBHelper(this);
         animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.animation_listview);
         btnanimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.anim_scale);
         editTextTitle.startAnimation(animation);
@@ -39,7 +42,9 @@ public class NotesActivity extends AppCompatActivity {
                 intentRequest.putExtra(keyTitle, String.valueOf(editTextTitle.getText()));
                 intentRequest.putExtra(keyDescription, String.valueOf(editTextDescription.getText()));
                 setResult(RESULT_OK, intentRequest);
-
+                String s1 = editTextTitle.getText().toString();
+                String s2 = editTextDescription.getText().toString();
+                dbHelper.addData(s1, s2);
                 finish();
             }
         });
