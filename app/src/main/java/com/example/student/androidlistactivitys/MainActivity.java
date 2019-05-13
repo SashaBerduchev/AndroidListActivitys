@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
                 contentValues.put("firstName", String.valueOf(listdat.getAdapter()));
 
                 long id = db.insert(NAME_TABLE, null, contentValues);
-
+                getData();
             }
 
         });
