@@ -96,7 +96,6 @@ public class MainActivity extends AppCompatActivity {
         list.add(new Person(name, sername));
         adapter = new AdapterData(list, getApplicationContext());
         listdat.setAdapter(adapter);
-        getData();
         btnanim = AnimationUtils.loadAnimation(getApplicationContext(), anim.anim_scale);
 
         btnOpen.startAnimation(btnanim);
@@ -206,6 +205,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        getData();
     }
 
     private void getData() {
