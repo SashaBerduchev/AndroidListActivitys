@@ -13,25 +13,22 @@ public class ProdDataDBHelper extends SQLiteOpenHelper {
     public static final String _ID = "id";
     public static final String COLUMN_1="Name";
     public static final String COLUMN_2="Model";
-    public static final String COLUMN_3="Prod";
     public static final String CREATE_TABLE="CREATE TABLE "
             + TABLE + " ( "
             + _ID + " INTEGER PRIMARY KEY, "
             + COLUMN_1 + " TEXT, "
-            + COLUMN_2 + " TEXT,"
-            + COLUMN_3 + "TEXT)";
+            + COLUMN_2 + " TEXT)";
 
     public ProdDataDBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-    public void addData(String s1,String s2, String s3)
+    public void addData(String s1,String s2)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_1,s1);
         values.put(COLUMN_2,s2);
-        values.put(COLUMN_3,s3);
         db.insert(TABLE,null,values);
         db.close();
     }

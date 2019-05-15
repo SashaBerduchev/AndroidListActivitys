@@ -50,7 +50,7 @@ public class Main3Activity extends AppCompatActivity {
                 intent.putExtra(keyProd, String.valueOf(prodtext.getText()));
                 setResult(RESULT_OK, intent);
                 startActivity(intent);
-                dataDBHelper.addData(nametext.getText().toString(), modelText.getText().toString(), prodtext.getText().toString());
+                dataDBHelper.addData(nametext.getText().toString(), modelText.getText().toString());
 
             }
         });

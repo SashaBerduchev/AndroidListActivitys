@@ -6,8 +6,8 @@ android {
         applicationId "com.example.student.androidlistactivitys"
         minSdkVersion 23
         targetSdkVersion 28
-        versionCode 5
-        versionName "5"
+        versionCode 76
+        versionName "6.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -49,4 +49,5 @@ dependencies {
 
     implementation 'com.github.GrenderG:Toasty:1.4.0'
 
+    implementation 'com.sdsmdg.harjot:longshadows:1.0.1'
 }

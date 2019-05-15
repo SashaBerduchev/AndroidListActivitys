@@ -89,7 +89,7 @@ public class Main4Activity extends AppCompatActivity {
         Cursor cursor = dbHelper.fetchData();
 
         ListAdapter myAdapter = new SimpleCursorAdapter(this, R.layout.prodtask, cursor,
-                new String[]{dbHelper._ID, dbHelper.COLUMN_1, dbHelper.COLUMN_2, dbHelper.COLUMN_3},
+                new String[]{dbHelper._ID, dbHelper.COLUMN_1, dbHelper.COLUMN_2},
                 new int[]{R.id.idnum,R.id.c1,R.id.c2, R.id.c3},0);
         listofstate.setAdapter(myAdapter);
     }

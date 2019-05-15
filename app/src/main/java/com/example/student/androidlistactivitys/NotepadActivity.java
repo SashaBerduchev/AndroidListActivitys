@@ -11,6 +11,9 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
+import com.sdsmdg.harjot.longshadows.LongShadowsTextView;
+import com.sdsmdg.harjot.longshadows.LongShadowsWrapper;
+
 import java.util.ArrayList;
 
 import DataBaseHelpers.NotesDBHelper;
@@ -27,6 +30,8 @@ public class NotepadActivity extends AppCompatActivity {
     static final String keyTitle = "keyTitle";
     static final String keyDescription = "keyDescription";
 
+    private LongShadowsTextView longShadowsTextView;
+    private LongShadowsWrapper longShadowsWrapper;
     private NotesDBHelper dbHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +45,9 @@ public class NotepadActivity extends AppCompatActivity {
         notepadview = findViewById(R.id.notepadView);
         floatBttn = findViewById(R.id.floatBttn);
         notesArrayList = new ArrayList<Notes>();
+        longShadowsWrapper = findViewById(R.id.longShadowsWrapper);
+        longShadowsTextView = findViewById(R.id.longShadowTextView);
+
         String title = intent.getStringExtra(keyTitle);
         String description = intent.getStringExtra(keyDescription);
         notesArrayList.add(new Notes(title, description));
