@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -24,13 +26,14 @@ public class Main4Activity extends AppCompatActivity {
     ListView listofstate;
     FloatingActionButton floatingActionButton;
     ProdDataDBHelper dbHelper;
+    Button btnHome;
     public static String keyName = "keyName";
     public static String keyModel = "keyModel";
     public static String keyProd = "keyProd";
 
     ArrayList<ProdData> listprod;
     AdapterList adapterList;
-
+    Animation animation;
     DBCreatorTool dbCreatorTool;
     SQLiteDatabase db;
 
@@ -40,7 +43,9 @@ public class Main4Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
         final Intent intent = getIntent();
+        final Intent intent1 = new Intent(this, MainActivity.class);
         listofstate= findViewById(R.id.listofstate);
+        btnHome = findViewById(R.id.btnHome);
         floatingActionButton = findViewById(R.id.floatingBttn);
         listprod= new ArrayList<ProdData>();
         dbHelper = new ProdDataDBHelper(this);
@@ -51,12 +56,12 @@ public class Main4Activity extends AppCompatActivity {
         adapterList = new AdapterList(listprod, this);
        // adapterList.notifyDataSetChanged();
         listofstate.setAdapter(adapterList);
-
         final Intent intentl = new Intent(this, Main3Activity.class);
-
+        animation = AnimationUtils.loadAnimation(this, R.anim.animation_listview);
+        listofstate.setAnimation(animation);
         dbCreatorTool = new DBCreatorTool(this);
         db=dbCreatorTool.getWritableDatabase();
-
+        getData();
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,6 +88,13 @@ public class Main4Activity extends AppCompatActivity {
                 }
             }
         });
+
+        btnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intent1);
+            }
+        });
     }
 
     public void getData() {
@@ -90,7 +102,7 @@ public class Main4Activity extends AppCompatActivity {
 
         ListAdapter myAdapter = new SimpleCursorAdapter(this, R.layout.prodtask, cursor,
                 new String[]{dbHelper._ID, dbHelper.COLUMN_1, dbHelper.COLUMN_2},
-                new int[]{R.id.idnum,R.id.c1,R.id.c2, R.id.c3},0);
+                new int[]{R.id.idnum,R.id.c1,R.id.c2},0);
         listofstate.setAdapter(myAdapter);
     }
    /* @Override
