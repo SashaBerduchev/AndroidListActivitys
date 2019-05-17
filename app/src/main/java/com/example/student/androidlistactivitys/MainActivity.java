@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -34,8 +35,7 @@ public class MainActivity extends AppCompatActivity {
     ListView listdat;
     Button btnaction;
     Button btnweb, btnmap, btncalc, btnmath, btnrecycleactivity, btnShape;
-
-
+    FloatingActionButton btnDeviceAction;
 
     Animation animation, btnanim;
 
@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         btnrecycleactivity = findViewById(R.id.btnRecycle);
         btnShape = findViewById(id.btnShapeActivity);
         notepadBttn = findViewById(id.notepadButton);
+        btnDeviceAction = findViewById(id.btnFloat);
         dataBase = new Main2ActivityDataBase(this);
         list = new ArrayList<Person>();
 
@@ -90,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
         final Intent intentshape = new Intent(this, ShapeViewActivity.class);
 
         final  Intent intentnotepadactivity = new Intent(this, NotepadActivity.class);
+
+        final Intent deviceactivity = new Intent(this, DeviceAddActivity.class);
 
         String name = intent.getStringExtra(keyName);
         String sername = intent.getStringExtra(keySename);
@@ -202,6 +205,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(intentnotepadactivity);
+            }
+        });
+
+        btnDeviceAction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(deviceactivity);
             }
         });
 
