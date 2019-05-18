@@ -18,7 +18,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SqlightListActivity"></activity>
+        <activity android:name=".PhoneActivity"></activity>
+        <activity android:name=".SqlightListActivity" />
         <activity android:name=".NotesActivity" />
         <activity android:name=".NotepadActivity" />
         <activity android:name=".ImageMatrixActivity" />
@@ -58,7 +59,6 @@
         <activity android:name=".CyclesActivity" />
         <activity android:name=".RequaestActivity" />
         <activity android:name=".ResycleListActivity" />
-        <activity android:name=".DeviceActivity" />
         <activity android:name=".DeviceAddActivity" />
         <activity android:name=".PhoneAdd" />
         <activity android:name=".ComputerAdd" />

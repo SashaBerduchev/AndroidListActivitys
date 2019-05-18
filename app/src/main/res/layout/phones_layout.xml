@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/model"
+        android:layout_width="370dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="24dp"
+        android:paddingRight="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/procc"
+        android:layout_width="380dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="104dp"
+        android:paddingRight="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/ram"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/batter"
+        android:layout_width="380dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="340dp"
+        android:paddingRight="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/cost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.677"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/graph"
+        android:layout_width="380dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="248dp"
+        android:paddingRight="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/batter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/cost"
+        android:layout_width="380dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:paddingRight="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.677"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/batter" />
+
+    <TextView
+        android:id="@+id/ram"
+        android:layout_width="380dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="60dp"
+        android:paddingRight="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/graph"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/procc" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="390dp"
+        android:layout_height="53dp"
+        android:layout_toRightOf="@+id/model"
+        android:paddingRight="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/model"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/c2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

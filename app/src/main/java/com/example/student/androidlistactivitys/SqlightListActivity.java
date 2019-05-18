@@ -66,7 +66,7 @@ public class SqlightListActivity extends AppCompatActivity {
         ListAdapter myAdapter = new SimpleCursorAdapter(this,R.layout.tasks,
                 cursor,
                 new String[]{dbHelp._ID,dbHelp.COLUMN_1,dbHelp.COLUMN_2},
-                new int[]{R.id.idnum,R.id.c1,R.id.c2},0);
+                new int[]{R.id.model,R.id.name,R.id.c2},0);
         alist.setAdapter(myAdapter);
 
     }

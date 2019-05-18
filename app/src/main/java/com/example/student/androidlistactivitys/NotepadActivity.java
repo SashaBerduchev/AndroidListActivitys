@@ -76,7 +76,7 @@ public class NotepadActivity extends AppCompatActivity {
         ListAdapter myAdapter = new SimpleCursorAdapter(this, R.layout.tasks,
                 cursor,
                 new String[]{dbHelper._ID,dbHelper.COLUMN_1,dbHelper.COLUMN_2},
-                new int[]{R.id.idnum,R.id.c1,R.id.c2},0);
+                new int[]{R.id.model,R.id.name,R.id.c2},0);
 
         notepadview.setAdapter(myAdapter);
     }

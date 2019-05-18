@@ -30,7 +30,7 @@ public class ComputerAdd extends AppCompatActivity {
         costtext = findViewById(R.id.textCost);
         btnsetcomputer = findViewById(R.id.btnSetComputers);
 
-        final Intent intentdeviceactivity = new Intent(this, DeviceActivity.class);
+        final Intent intentdeviceactivity = new Intent(this, DeviceAddActivity.class);
 
         btnsetcomputer.setOnClickListener(new View.OnClickListener() {
             @Override

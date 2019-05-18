@@ -29,7 +29,7 @@ public class ListActivity extends AppCompatActivity {
         btnList = findViewById(R.id.btnList);
         btndevice = findViewById(R.id.btnDevice);
 
-        final Intent deviceintent = new Intent(this, DeviceActivity.class);
+        final Intent deviceintent = new Intent(this, PhoneActivity.class);
 
         btnList.setOnClickListener(new View.OnClickListener() {
             @Override

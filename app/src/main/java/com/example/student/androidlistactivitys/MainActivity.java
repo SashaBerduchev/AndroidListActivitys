@@ -1,14 +1,12 @@
 package com.example.student.androidlistactivitys;
 
 import android.content.ContentValues;
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -222,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
         Cursor cursor = dataBase.fetchData();
         ListAdapter myAdapter = new SimpleCursorAdapter(this, R.layout.tasks, cursor,
                 new String[]{dataBase._ID, dataBase.COLUMN_1, dataBase.COLUMN_2},
-                new int[]{R.id.idnum,R.id.c1,R.id.c2},0);
+                new int[]{R.id.model,R.id.name,R.id.c2},0);
         listdat.setAdapter(myAdapter);
     }
 
