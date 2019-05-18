@@ -17,6 +17,7 @@ public class DeviceAddActivity extends AppCompatActivity {
         btncomputers = findViewById(R.id.btnComputers);
 
         final Intent intentphone = new Intent(this, PhoneAdd.class);
+        final Intent intentcomp = new Intent(this, ComputerAddActivity.class);
 
         btnphone.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,7 +29,7 @@ public class DeviceAddActivity extends AppCompatActivity {
         btncomputers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(intentcomp);
             }
         });
     }

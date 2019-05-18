@@ -6,18 +6,19 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class PhoneDB extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME="DbPhones";
+public class CompDB extends SQLiteOpenHelper {
+    public static final String DATABASE_NAME="DbComp";
     public static final int DATABASE_VERSION=1;
-    public static final String TABLE = "DbTablePhones";
+    public static final String TABLE = "DbTableComps";
     public static final String _ID = "id";
-    public static final String COLUMN_1="Title";
+    public static final String COLUMN_1="Name";
     public static final String COLUMN_2="Model";
     public static final String COLUMN_3="Proc";
     public static final String COLUMN_4="Ram";
     public static final String COLUMN_5="gpu";
-    public static final String COLUMN_6="battery";
-    public static final String COLUMN_7="cost";
+    public static final String COLUMN_6="HDD";
+    public static final String COLUMN_7="Power";
+    public static final String COLUMN_8="cost";
     public static final String CREATE_TABLE="CREATE TABLE "
             + TABLE + " ( "
             + _ID + " INTEGER PRIMARY KEY, "
@@ -27,13 +28,14 @@ public class PhoneDB extends SQLiteOpenHelper {
             + COLUMN_4 + " TEXT, "
             + COLUMN_5 + " TEXT, "
             + COLUMN_6 + " TEXT, "
-            + COLUMN_7 + " TEXT)";
+            + COLUMN_7 + " TEXT, "
+            + COLUMN_8 + " TEXT)";
 
-    public PhoneDB(Context context) {
+    public CompDB(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-    public void addData(String s1,String s2, String s3, String s4, String s5, String s6, String s7)
+    public void addData(String s1,String s2, String s3, String s4, String s5, String s6, String s7, String s8)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -44,6 +46,7 @@ public class PhoneDB extends SQLiteOpenHelper {
         values.put(COLUMN_5,s5);
         values.put(COLUMN_6,s6);
         values.put(COLUMN_7,s7);
+        values.put(COLUMN_8,s8);
         db.insert(TABLE,null,values);
         db.close();
     }
@@ -51,7 +54,7 @@ public class PhoneDB extends SQLiteOpenHelper {
     public Cursor fetchData()
     {
         SQLiteDatabase db = this.getReadableDatabase();
-        String str = ("SELECT rowid _id, * FROM DbTablePhones");
+        String str = ("SELECT rowid _id, * FROM DbTableComps");
         return db.rawQuery(str,null);
 
     }
@@ -65,5 +68,4 @@ public class PhoneDB extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE);
         onCreate(db);
     }
-
 }
