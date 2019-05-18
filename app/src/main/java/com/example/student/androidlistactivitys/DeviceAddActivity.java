@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class DeviceAddActivity extends AppCompatActivity {
 
-    Button btnphone, btncomputers;
+    Button btnphone, btncomputers, btnComputerd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,12 +16,19 @@ public class DeviceAddActivity extends AppCompatActivity {
         btnphone = findViewById(R.id.btnPhones);
         btncomputers = findViewById(R.id.btnComputers);
 
-        Intent intentphone = new Intent(this, PhoneAdd.class);
+        final Intent intentphone = new Intent(this, PhoneAdd.class);
 
         btnphone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(intentphone);
+            }
+        });
+
+        btncomputers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
     }
