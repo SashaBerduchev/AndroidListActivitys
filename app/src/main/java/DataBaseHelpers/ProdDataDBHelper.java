@@ -19,7 +19,7 @@ public class ProdDataDBHelper extends SQLiteOpenHelper {
             + COLUMN_1 + " TEXT, "
             + COLUMN_2 + " TEXT)";
 
-       public ProdDataDBHelper(Context context) {
+    public ProdDataDBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
