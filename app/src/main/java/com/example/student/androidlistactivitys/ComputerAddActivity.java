@@ -27,13 +27,13 @@ public class ComputerAddActivity extends AppCompatActivity {
         graphics = findViewById(R.id.compGraphics);
         power = findViewById(R.id.compPower);
         cost = findViewById(R.id.compCost);
-
+        final Intent compintent = new Intent(this, ComputerActivity.class);
         compDB = new CompDB(this);
         btnSet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 compDB.addData(name.getText().toString(), model.getText().toString(), procc.getText().toString(), ram.getText().toString(), hdd.getText().toString(), graphics.getText().toString(), power.getText().toString(), cost.getText().toString());
-
+                startActivity(compintent);
             }
         });
     }
